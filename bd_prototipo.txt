@@ -41,3 +41,17 @@ CREATE (uSergio:Usuario {nombre: 'Sergio', frecuencia: 'Alta', rol: 'Tester'})
 CREATE (uKenett:Usuario {nombre: 'Kenett', frecuencia: 'Media', rol: 'Tester'})
 CREATE (uCristian:Usuario {nombre: 'Cristian', frecuencia: 'Baja', rol: 'Tester'})
 CREATE (uEduardo:Usuario {nombre: 'Eduardo', frecuencia: 'Baja', rol: 'Tester'})
+
+// 5. CREACIÓN DE RELACIONES: USUARIO -> SERIE
+
+// Perfil de Sergio
+CREATE (uSergio)-[:LE_GUSTA]->(sStranger)
+CREATE (uSergio)-[:LE_GUSTA]->(sFallout)
+CREATE (uSergio)-[:ES_FAVORITA]->(sInvincible)
+CREATE (uSergio)-[:NO_LE_GUSTA]->(sOffice) 
+
+// Perfil de Kenett
+CREATE (uKenett)-[:LE_GUSTA]->(sBreaking)
+CREATE (uKenett)-[:LE_GUSTA]->(sPeaky)
+CREATE (uKenett)-[:ES_FAVORITA]->(sSuits)
+CREATE (uKenett)-[:QUIERE_VER]->(sGot) 
