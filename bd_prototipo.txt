@@ -67,3 +67,8 @@ CREATE (uEduardo)-[:LE_GUSTA]->(sInvincible)
 CREATE (uEduardo)-[:LE_GUSTA]->(sPeaky)
 CREATE (uEduardo)-[:ES_FAVORITA]->(sFallout)
 CREATE (uEduardo)-[:QUIERE_VER]->(sSuits) 
+
+// Ejemplo para verificar recomendaciones para Eduardo basadas en las series que le gustan o son sus favoritas, comparando con el género
+MATCH (u:Usuario {nombre: 'Eduardo'})-[:ES_FAVORITA|LE_GUSTA]->(:Serie)-[:PERTENECE_A]->(g:Genero)<-[:PERTENECE_A]-(sRec:Serie)
+WHERE NOT (u)-[:LE_GUSTA|ES_FAVORITA|NO_LE_GUSTA|QUIERE_VER]->(sRec)
+RETURN DISTINCT sRec.titulo AS Recomendacion, g.nombre AS Genero_Relacionado
