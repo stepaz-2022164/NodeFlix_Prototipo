@@ -36,3 +36,8 @@ CREATE (sFallout)-[:PERTENECE_A]->(gSciFi), (sFallout)-[:PERTENECE_A]->(gAccion)
 CREATE (sDerry)-[:PERTENECE_A]->(gTerror), (sDerry)-[:PERTENECE_A]->(gMisterio)
 CREATE (sSuits)-[:PERTENECE_A]->(gDrama)
 
+// 4. CREACIÓN DE NODOS: USUARIOS
+CREATE (uSergio:Usuario {nombre: 'Sergio', frecuencia: 'Alta', rol: 'Tester'})
+CREATE (uKenett:Usuario {nombre: 'Kenett', frecuencia: 'Media', rol: 'Tester'})
+CREATE (uCristian:Usuario {nombre: 'Cristian', frecuencia: 'Baja', rol: 'Tester'})
+CREATE (uEduardo:Usuario {nombre: 'Eduardo', frecuencia: 'Baja', rol: 'Tester'})
