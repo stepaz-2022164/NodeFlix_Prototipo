@@ -11,3 +11,9 @@ CREATE (gFantasia:Genero {nombre: 'Fantasía'})
 CREATE (gAccion:Genero {nombre: 'Acción'})
 CREATE (gAnimacion:Genero {nombre: 'Animación'})
 CREATE (gTerror:Genero {nombre: 'Terror'})
+
+// 2. CREACIÓN DE NODOS: SERIES
+CREATE (sStranger:Serie {titulo: 'Stranger Things', youtube_key: 'b9EkMc79ZSU'})
+CREATE (sBreaking:Serie {titulo: 'Breaking Bad', youtube_key: 'HhesaQXLuRY'})
+CREATE (sOffice:Serie {titulo: 'The Office', youtube_key: 'LqV0v28F_Jk'})
+CREATE (sGot:Serie {titulo: 'Game of Thrones', youtube_key: 'KPLWWIOCOOQ'})
