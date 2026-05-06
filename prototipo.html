@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NodeFlix - Prototipo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .pantalla { display: none; animation: fadeIn 0.5s; }
+        .pantalla.activa { display: block; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .card-seleccionada { border: 4px solid #e50914; transform: scale(1.05); }
+    </style>
+</head>
+<body class="bg-gray-900 text-white font-sans min-h-screen">
+
+    <div id="pantalla1" class="pantalla activa container mx-auto px-4 py-10 max-w-4xl">
+        <div class="text-center mb-10">
+            <h1 class="text-4xl font-bold text-red-600 mb-2">NodeFlix</h1>
+            <h2 class="text-2xl font-semibold">¡Bienvenido!</h2>
+            <p class="text-gray-400 mt-2">Para darte las mejores recomendaciones, selecciona 2 series que te llamen la atención.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Carta Serie 1 -->
+            <div class="bg-gray-800 rounded-lg overflow-hidden cursor-pointer transition-transform hover:scale-105" onclick="this.classList.toggle('card-seleccionada')">
+                <img src="https://img.youtube.com/vi/b9EkMc79ZSU/mqdefault.jpg" alt="Stranger Things" class="w-full object-cover h-48">
+                <div class="p-4">
+                    <h3 class="font-bold text-lg">Stranger Things</h3>
+                    <p class="text-sm text-gray-400">Sci-Fi / Misterio</p>
+                </div>
+            </div>
+            <!-- Carta Serie 2 -->
+            <div class="bg-gray-800 rounded-lg overflow-hidden cursor-pointer transition-transform hover:scale-105" onclick="this.classList.toggle('card-seleccionada')">
+                <img src="https://img.youtube.com/vi/HhesaQXLuRY/mqdefault.jpg" alt="Breaking Bad" class="w-full object-cover h-48">
+                <div class="p-4">
+                    <h3 class="font-bold text-lg">Breaking Bad</h3>
+                    <p class="text-sm text-gray-400">Drama / Crimen</p>
+                </div>
+            </div>
+            <!-- Carta Serie 3 -->
+            <div class="bg-gray-800 rounded-lg overflow-hidden cursor-pointer transition-transform hover:scale-105" onclick="this.classList.toggle('card-seleccionada')">
+                <img src="https://tse1.mm.bing.net/th/id/OIP.8EIvhYZM6H4yUWDcpOoFHwHaEK?rs=1&pid=ImgDetMain&o=7&rm=3" alt="The Office" class="w-full object-cover h-48">
+                <div class="p-4">
+                    <h3 class="font-bold text-lg">The Office</h3>
+                    <p class="text-sm text-gray-400">Comedia</p>
+                </div>
+            </div>
+            <!-- Carta Serie 4 -->
+            <div class="bg-gray-800 rounded-lg overflow-hidden cursor-pointer transition-transform hover:scale-105" onclick="this.classList.toggle('card-seleccionada')">
+                <img src="https://img.youtube.com/vi/KPLWWIOCOOQ/mqdefault.jpg" alt="Game of Thrones" class="w-full object-cover h-48">
+                <div class="p-4">
+                    <h3 class="font-bold text-lg">Game of Thrones</h3>
+                    <p class="text-sm text-gray-400">Fantasía / Acción</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-10">
+            <button onclick="cambiarPantalla('pantalla2')" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full text-lg transition-colors">
+                Continuar (Simular 2/2)
+            </button>
+        </div>
+    </div>
+
+    <script>
+        function cambiarPantalla(idDestino) {
+            document.querySelectorAll('.pantalla').forEach(p => {
+                p.classList.remove('activa');
+            });
+            document.getElementById(idDestino).classList.add('activa');
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+</html>
