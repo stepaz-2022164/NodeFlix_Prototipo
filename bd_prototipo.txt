@@ -1,0 +1,13 @@
+// 0. LIMPIEZA 
+MATCH (n) DETACH DELETE n;
+
+// 1. CREACIÓN DE NODOS: GÉNEROS
+CREATE (gSciFi:Genero {nombre: 'Sci-Fi'})
+CREATE (gDrama:Genero {nombre: 'Drama'})
+CREATE (gComedia:Genero {nombre: 'Comedia'})
+CREATE (gMisterio:Genero {nombre: 'Misterio'})
+CREATE (gCrimen:Genero {nombre: 'Crimen'})
+CREATE (gFantasia:Genero {nombre: 'Fantasía'})
+CREATE (gAccion:Genero {nombre: 'Acción'})
+CREATE (gAnimacion:Genero {nombre: 'Animación'})
+CREATE (gTerror:Genero {nombre: 'Terror'})
