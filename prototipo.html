@@ -63,6 +63,47 @@
         </div>
     </div>
 
+    <div id="pantalla2" class="pantalla container mx-auto px-4 py-10 max-w-5xl">
+        <div class="text-center mb-10">
+            <h1 class="text-3xl font-bold mb-2">¡Excelente elección!</h1>
+            <p class="text-gray-400">Basándonos en tus gustos, escoge 4 series más de esta lista rápida:</p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="cursor-pointer transition-transform hover:scale-105" onclick="this.classList.toggle('card-seleccionada')">
+                <img src="https://goinswriter.com/wp-content/uploads/2013/10/breaking-bad.png" class="w-full rounded-lg shadow-lg">
+            </div>
+            <div class="cursor-pointer transition-transform hover:scale-105" onclick="this.classList.toggle('card-seleccionada')">
+                <img src="https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA21tQ2e.img?w=1280&h=720&m=4&q=89" class="w-full rounded-lg shadow-lg">
+            </div>
+            <div class="cursor-pointer transition-transform hover:scale-105" onclick="this.classList.toggle('card-seleccionada')">
+                <img src="https://www.locosxlosjuegos.com/wp-content/uploads/2021/05/Invincible-portada.jpg" class="w-full rounded-lg shadow-lg">
+            </div>
+            <div class="cursor-pointer transition-transform hover:scale-105" onclick="this.classList.toggle('card-seleccionada')">
+                <img src="https://m.media-amazon.com/images/M/MV5BZTIwNjdjZmUtZDJmOC00M2RmLTg2NTItMTMzZjZhNTk3YjVmXkEyXkFqcGdeQWFybm8@._V1_.jpg" class="w-full rounded-lg shadow-lg">
+            </div>
+            <div class="cursor-pointer transition-transform hover:scale-105" onclick="this.classList.toggle('card-seleccionada')">
+                <img src="https://static0.colliderimages.com/wordpress/wp-content/uploads/2022/02/Peaky-Blinders-Cast-and-Character-Guide.jpg?w=1200&h=628&fit=crop" class="w-full rounded-lg shadow-lg">
+            </div>
+            <div class="cursor-pointer transition-transform hover:scale-105" onclick="this.classList.toggle('card-seleccionada')">
+                <img src="https://images.ecestaticos.com/V4CiL2KFeh63i3c3KUE3pHSleOY=/0x2:1437x810/1200x675/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2Ffe2%2F3c0%2Fb28%2Ffe23c0b2878276032fe5f0d69732ef95.jpg" class="w-full rounded-lg shadow-lg">
+            </div>
+            <div class="cursor-pointer transition-transform hover:scale-105" onclick="this.classList.toggle('card-seleccionada')">
+                <img src="https://img.asmedia.epimg.net/resizer/v2/IMV5OOVNFVN5XNW3KOWSK74DXQ.jpg?auth=e5eceb90c9f2347dc5f165a80d16ed1514a7e8f89f8240bf7b6b228364eeed27&width=1472&height=828&smart=true" class="w-full rounded-lg shadow-lg">
+            </div>
+            <div class="cursor-pointer transition-transform hover:scale-105" onclick="this.classList.toggle('card-seleccionada')">
+                <img src="https://canalusb.cubadebate.cu/wp-content/uploads/2024/03/Fallout-1-1024x614.jpg" class="w-full rounded-lg shadow-lg">
+            </div>
+        </div>
+
+        <div class="text-center mt-10">
+            <button onclick="cambiarPantalla('pantalla3')" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full text-lg transition-colors">
+                Ir a Mis Recomendaciones
+            </button>
+        </div>
+    </div>
+
+
     <script>
         function cambiarPantalla(idDestino) {
             document.querySelectorAll('.pantalla').forEach(p => {
