@@ -55,3 +55,15 @@ CREATE (uKenett)-[:LE_GUSTA]->(sBreaking)
 CREATE (uKenett)-[:LE_GUSTA]->(sPeaky)
 CREATE (uKenett)-[:ES_FAVORITA]->(sSuits)
 CREATE (uKenett)-[:QUIERE_VER]->(sGot) 
+
+// Perfil de Cristian
+CREATE (uCristian)-[:LE_GUSTA]->(sBreaking)
+CREATE (uCristian)-[:LE_GUSTA]->(sOffice)
+CREATE (uCristian)-[:ES_FAVORITA]->(sOffice)
+CREATE (uCristian)-[:QUIERE_VER]->(sDerry)
+
+// Perfil de Eduardo
+CREATE (uEduardo)-[:LE_GUSTA]->(sInvincible)
+CREATE (uEduardo)-[:LE_GUSTA]->(sPeaky)
+CREATE (uEduardo)-[:ES_FAVORITA]->(sFallout)
+CREATE (uEduardo)-[:QUIERE_VER]->(sSuits) 
