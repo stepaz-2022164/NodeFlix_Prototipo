@@ -23,3 +23,16 @@ CREATE (sPeaky:Serie {titulo: 'Peaky Blinders'})
 CREATE (sFallout:Serie {titulo: 'Fallout'})
 CREATE (sDerry:Serie {titulo: 'It: Welcome to Derry'})
 CREATE (sSuits:Serie {titulo: 'Suits'})
+
+// 3. CREACIÓN DE RELACIONES: SERIE -> GÉNERO
+CREATE (sStranger)-[:PERTENECE_A]->(gSciFi), (sStranger)-[:PERTENECE_A]->(gMisterio)
+CREATE (sBreaking)-[:PERTENECE_A]->(gDrama), (sBreaking)-[:PERTENECE_A]->(gCrimen)
+CREATE (sOffice)-[:PERTENECE_A]->(gComedia)
+CREATE (sGot)-[:PERTENECE_A]->(gFantasia), (sGot)-[:PERTENECE_A]->(gAccion)
+
+CREATE (sInvincible)-[:PERTENECE_A]->(gAnimacion), (sInvincible)-[:PERTENECE_A]->(gAccion), (sInvincible)-[:PERTENECE_A]->(gSciFi)
+CREATE (sPeaky)-[:PERTENECE_A]->(gDrama), (sPeaky)-[:PERTENECE_A]->(gCrimen)
+CREATE (sFallout)-[:PERTENECE_A]->(gSciFi), (sFallout)-[:PERTENECE_A]->(gAccion)
+CREATE (sDerry)-[:PERTENECE_A]->(gTerror), (sDerry)-[:PERTENECE_A]->(gMisterio)
+CREATE (sSuits)-[:PERTENECE_A]->(gDrama)
+
